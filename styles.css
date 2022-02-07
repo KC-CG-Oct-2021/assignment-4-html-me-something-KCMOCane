@@ -3,8 +3,10 @@
     width: 100%;
     height: auto;*/
 /* Core Styles */
+
 body {
-    margin:0;
+    display: block;
+    margin:8px;
     font-family: Arial, Helvetica, sans-serif;
     background: #333;
     color: #fff;
@@ -14,8 +16,8 @@ body {
 }
 
 img {
-    display: block;
-    float: left;
+    display: inline-block;
+    float: center;
     width:  200px;
     height: 200px;
     object-fit: cover;
@@ -23,21 +25,24 @@ img {
 }
 
 h1, h2, h3 {
-    color: #610ad3;
+    color: red;
     margin:0;
     padding: 1em 0;
     padding-top: 1em;
+    -webkit-text-stroke: 1px black;
 }
 
 article {
     text-emphasis-color: black;
 }
 
-p {
+p1 {
     margin: 0;
-    padding: 1em 0;
-    text-align: justify;
+    padding: 1.5em 0;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
 }
+
 
 .btn {
     display: inline-block;
@@ -45,7 +50,7 @@ p {
     color: #fff;
     text-decoration: none;
     padding: 1em 2em;
-    border: 1px solid #666
+    border: 1px solid #666;
     margin: .5em 0;
 }
 
@@ -56,13 +61,13 @@ p {
 
 /* Header Showcase */
 
-#showcase {
+#mainHeading {
     min-height: 450 px;
     color: #fff;
     text-align: center;
 }
 
-#showcase .bg-image {
+#mainHeading .bg-image {
     position: absolute;
     background: #333 url("https://static01.nyt.com/newsgraphics/2021/02/17/black-history-timeline/c48c92e5dc64848822732b18425db1b6923cb708/cover.jpg");
     background-position: center;
@@ -73,12 +78,12 @@ p {
     opacity: 0.4;
 }
 
-#showcase h1 {
+#mainHeading h1 {
     padding-top: 100px;
     padding-bottom: 0;
 }
 
-#showcase .content-wrap,
+#mainHeading .content-wrap,
 #section-a .content-wrap {
     padding: 0 1.5em;
 }
@@ -93,22 +98,23 @@ p {
 /* Section B */
 
 #section-b {
-    padding: 3em 1em 1em;
+    padding: 3em 3em 1em;
 }
 
 #section-b ul   {
 list-style: none;
-margin: -4px;
-padding:-4px;
+margin: 10px;
+padding: 1.5px;
 }
 
 #section-b li {
     background: #fff;
     color: #333;
+    padding: 3em;
 }
 
 .card-content {
-    padding: 6em;
+    padding: .5em;
     text-align: center;
 }
 
@@ -132,6 +138,13 @@ padding:-4px;
     background: #d3ae0a;
 }
 
+.funParagraph {
+    color: green;
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+}
+
 #main-footer {
     padding: 2em;
     background: #000;
@@ -149,7 +162,7 @@ padding:-4px;
 @media(min-width: 700px) {
     .grid {
         display: grid;
-        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 50em)) 1fr;
     }
 
     #section-a .content-text {
@@ -172,11 +185,11 @@ padding:-4px;
 
     #section-b ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     
     #section b li {
-        width: 31%;
+        width: 20%;
 
     }
 }
